@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    footer {
+      background-color: #f8f9fa;
+      padding: 15px 0;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      border-top: 1px solid #dee2e6;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-info">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">T.T.C</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav m-auto">
+            <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link text-white" href="about.html">About</a>
+            <a class="nav-link text-white" href="faq.html">Faq</a>
+            <a class="nav-link text-white" href="contact.html">Contact</a>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <div class="container mt-5">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
+            What is TTC?
+          </button>
+        </h2>
+        <div id="faqCollapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            TTC is a popular music band known for its energetic performances and hit songs.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapse2">
+            How can I attend TTC concerts?
+          </button>
+        </h2>
+        <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Concert details and ticket information are posted regularly on our official website and social media
+            channels.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapse3">
+            Can I become a fan club member?
+          </button>
+        </h2>
+        <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes! Visit our official website and sign up for the fan club to receive exclusive updates.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapse4">
+            Where can I find TTC merchandise?
+          </button>
+        </h2>
+        <div id="faqCollapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Merchandise is available through our official online store linked on our website.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapse5">
+            How to contact TTC management?
+          </button>
+        </h2>
+        <div id="faqCollapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Use the contact form on the Contact Us page or email us at contact@ttc.com.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer start -->
+  <footer>
+
+    <div class="container footer-content">
+      <p class="mb-0">All rights reserved &copy; Raj TTC</p>
+      <div class="icon">
+        <img src="images/facebook.svg" alt="Facebook" width="20">
+        <img src="images/facebook.svg" alt="Facebook" width="20">
+        <img src="images/facebook.svg" alt="Facebook" width="20">
+        <img src="images/facebook.svg" alt="Facebook" width="20">
+      </div>
+    </div>
+  </footer>
+  <!-- Footer end -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

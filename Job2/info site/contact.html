@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">T.T.C</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav m-auto">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link text-white" href="about.html">About</a>
+                        <a class="nav-link text-white" href="faq.html">Faq</a>
+                        <a class="nav-link text-white" href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--About Company start  -->
+    <div class="container">
+        <h1 class="text-center mt-3 mb-5">Contact Us</h1>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4 ">
+
+            <div class="col">
+                <div class="card border border-0">
+
+                    <div class="card-body">
+
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Your Name</label>
+                                <input id="username" type="text" class="form-control" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Your Phone Number</label>
+                                <input id="cell" type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email address</label>
+                                <input id="email" type="email" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+                                <textarea id="textarea" class="form-control" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input id="checkbox" type="checkbox" class="form-check-input">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button onclick="test()" type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border border-0">
+                    <img src="images/intro.jpg" class="" width="100%" height="100%">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <h2><span id="date"></span>&nbsp; &nbsp; &nbsp; &nbsp;<span id="time"></span></h2>
+    </div>
+
+    <div class="mt-3">
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3633.6820740997873!2d88.602322325356!3d24.392360878237895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fbef2a74af990d%3A0x58f4884b87732342!2z4Kaf4Ka_4Kaf4Ka_4Ka44Ka_IOCmsOCmvuCmnOCmtuCmvuCmueCngA!5e0!3m2!1sbn!2sbd!4v1752491927223!5m2!1sbn!2sbd"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+
+    <!-- Footer start -->
+    <hr>
+    <div class="container d-flex" style="position: relative;">
+        <p>All rights reserved &copy Raj TTC</p>
+        <div class="icon" style="position: absolute; right: 0;">
+            <img src="images/facebook.svg" alt="" width="20">
+            <img src="images/facebook.svg" alt="" width="20">
+            <img src="images/facebook.svg" alt="" width="20">
+            <img src="images/facebook.svg" alt="" width="20">
+        </div>
+    </div>
+    <!-- Footer end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function test() {
+            var a = document.getElementById('username').value.trim();
+            var b = document.getElementById('cell').value.trim();
+            var c = document.getElementById('email').value.trim();
+            var d = document.getElementById('textarea').value.trim();
+            var e = document.getElementById('checkbox');
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var mobilePattern = /^\d{11}$/;
+
+            let errors = [];
+
+            // Check empty fields
+            if (a === "" || b === "" || c === "" || d === "" || !e.checked) {
+                errors.push("All fields must be filled and checkbox checked.");
+            }
+
+            // Check email
+            if (!emailPattern.test(c)) {
+                errors.push("Invalid email format.");
+            }
+
+            // Check mobile
+            if (!mobilePattern.test(b)) {
+                errors.push("Invalid mobile number (must be exactly 11 digits).");
+            }
+
+            // Show result
+            if (errors.length > 0) {
+                window.alert(errors.join("\n"));
+            } else {
+                window.alert("success input");
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
